@@ -1,0 +1,26 @@
+name: Count Books Read This Year
+
+on:
+  schedule:
+    # 毎日9:00 UTC (日本時間18:00)に実行
+    - cron: "0 9 * * *"
+  workflow_dispatch: # 手動実行用
+
+jobs:
+  count-books:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Count books read this year
+        run: node index.js

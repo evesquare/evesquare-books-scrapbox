@@ -1,0 +1,19 @@
+{
+  "name": "evesquare-read-books-counter",
+  "version": "1.0.0",
+  "description": "Scrapboxの読書記録をカウントするツール",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scrapbox",
+    "books"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
